@@ -1,0 +1,4 @@
+websockets==8.0.2
+ccxt==1.18.1293
+environs==6.0.0
+uvloop=0.13.0
