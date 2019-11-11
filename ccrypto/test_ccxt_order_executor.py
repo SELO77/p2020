@@ -1,5 +1,3 @@
-from time import sleep
-
 import ccxt
 from environs import Env
 

@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        @keyframes sample-ani {
+            0% {
+                transform: translate(0px, 0);
+            }
+            50% {
+                transform: translate(300px, 0);
+                background-color: skyblue;
+            }
+            100% {
+                transform: translate(400px, 500px);
+                background-color: pink;
+            }
+        }
+
+        .box {
+            border: 2px solid black;
+            background-color: #ffff00;
+            width: 100px;
+            height: 100px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            animation: sample-ani 2s cubic-bezier(0,-0.01, 0, 1.49) infinite;
+        }
+    </style>
+</head>
+
+<body>
+<p>
+    문단1
+</p>
+<p>
+    문단1
+</p>
+
+<div class="box-container">
+    <div class="box">Box</div>
+</div>
+<p>
+    문단2
+</p>
+
+</body>
+
+</html>

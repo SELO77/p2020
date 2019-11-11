@@ -17,7 +17,8 @@ ms_ts = lambda : int(time.time() * 1000)
 URI = 'wss://fstream.binance.com/'
 COMBINED_STREAM_URI = URI + 'stream?streams='
 
-SUB_COMBINED_STREAM_URI = COMBINED_STREAM_URI + f'{BTCUSD}@ticker/{BTCUSD}@depth/{BTCUSD}@kline_{IT_1M}'
+# SUB_COMBINED_STREAM_URI = COMBINED_STREAM_URI + f'{BTCUSD}@ticker/{BTCUSD}@depth/{BTCUSD}@kline_{IT_1M}'
+SUB_COMBINED_STREAM_URI = COMBINED_STREAM_URI + f'{BTCUSD}@ticker'
 STREAM_NAME_FORMAT = '{symbol}@{name}'
 
 # https://binance-docs.github.io/apidocs/futures/en/#symbol-order-book-ticker-market_data
