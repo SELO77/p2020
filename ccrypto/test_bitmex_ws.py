@@ -52,8 +52,10 @@ async def init():
     row_count = 0
 
     async with websockets.connect(URI) as ws:
-        # await subscribe_topic(ws, PUBLIC_TOPICS['ORDERBOOKL2'], XBTUSD)  # 1초에 약 100개 이상의 객체 전달
-        await subscribe_topic(ws, PUBLIC_TOPICS['TRADE'], XBTUSD)
+        await subscribe_topic(ws, PUBLIC_TOPICS['ORDERBOOKL2'], XBTUSD)  # 1초에 약 100개 이상의 객체 전달
+        # await subscribe_topic(ws, PUBLIC_TOPICS['ORDERBOOK10'], XBTUSD)
+        # await subscribe_topic(ws, PUBLIC_TOPICS['ORDERBOOKL2_25'], XBTUSD)
+        # await subscribe_topic(ws, PUBLIC_TOPICS['TRADE'], XBTUSD)
         # await subscribe_topic(ws, PUBLIC_TOPICS['LIQUIDATION'], XBTUSD)
         # await subscribe_topic(ws, PUBLIC_TOPICS['TRADEBIN1M'], XBTUSD)
 

@@ -1,0 +1,28 @@
+.stage {
+    width: 100vw;
+    height: 75vw;
+    background: #fff000;
+    position: relative;
+}
+
+.ilbuni {
+    position: absolute;
+    width: 100px;
+    height: 100px;
+    /* background-repeat: no-repeat; */
+    background-size: contain;
+}
+
+.ilbuni:nth-of-type(1) {
+    left: 5%;
+    bottom: 5%;
+    background-image: url(../ilbuni/ilbuni_0.png);
+}
+
+.ilbuni:nth-of-type(2) {
+    background-image: url(../ilbuni/ilbuni_1.png);
+}
+
+.ilbuni:nth-of-type(3) {
+    background-image: url(../ilbuni/ilbuni_2.png);
+}

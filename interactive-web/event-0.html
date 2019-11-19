@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Event - this and event object</title>
+    <style>
+        .characters {
+            display: flex;
+            flex-direction: row;
+            background: #fff000;
+            height: 60vh;
+            align-items: center;
+            justify-content: space-around;
+        }
+
+        .characters .ilbuni {
+            display: inline-block;
+        }
+
+        img {
+            max-width: 100%;
+            height: auto;
+        }
+
+        .ilbuni>img {
+            cursor: pointer;
+        }
+
+        .ilbuni {
+            width: 100px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="characters">
+        <div class="ilbuni a">
+            <img src="ilbuni/ilbuni_0.png" alt="일분이  " class="ilbuni">
+        </div>
+        <div class="ilbuni b">
+            <img src="ilbuni/ilbuni_1.png" alt="일분이" class="ilbuni">
+        </div>
+        <div class="ilbuni c">
+            <img src="ilbuni/ilbuni_2.png" alt="일분이" class="ilbuni">
+        </div>
+        <div class="ilbuni d">
+            <img src="ilbuni/ilbuni_3.png" alt="일분이" class="ilbuni">
+        </div>
+    </div>
+
+    <script>
+        (function () {
+            console.log('Load Script');
+            const characters = document.querySelector('.characters');
+            function clickHandler(e) {
+                console.log(this);
+                console.log(e.currentTarget);
+                console.log(e.target);
+            }
+            
+            characters.addEventListener('click', clickHandler);
+
+        })();
+    </script>
+</body>
+
+
+</html>
