@@ -3,26 +3,51 @@
     height: 75vw;
     background: #fff000;
     position: relative;
+    overflow: hidden;
+}
+
+@keyframes moving {
+    from {
+        transform: translateX(10vw);
+    }
+    to {
+        transform: translateX(70vw);
+    }
 }
 
 .ilbuni {
     position: absolute;
     width: 100px;
     height: 100px;
-    /* background-repeat: no-repeat; */
+    background-repeat: no-repeat;
     background-size: contain;
+    animation: moving alternate infinite;
 }
 
-.ilbuni:nth-of-type(1) {
+.ilbuni:nth-child(1) {
     left: 5%;
     bottom: 5%;
     background-image: url(../ilbuni/ilbuni_0.png);
+    animation-duration: 15s;
 }
 
-.ilbuni:nth-of-type(2) {
+.ilbuni:nth-child(2) {
+    left: 8%;
+    bottom: 8%;
     background-image: url(../ilbuni/ilbuni_1.png);
+    animation-duration: 8s;
 }
 
-.ilbuni:nth-of-type(3) {
+.ilbuni:nth-child(3) {
+    left: 3%;
+    bottom: 3%;
     background-image: url(../ilbuni/ilbuni_2.png);
+    animation-duration: 7s;
+}
+
+.ilbuni {
+    left: 3%;
+    bottom: 3%;
+    background-image: url(../ilbuni/ilbuni_2.png);
+    animation-duration: 7s;
 }

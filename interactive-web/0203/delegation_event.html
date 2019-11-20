@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Delegation Event</title>
+    <style>
+        .menu {
+            width: 100vw;
+            height: 75vw;
+            display: flex;
+            background-color: #fff000;
+            overflow: hidden;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .menu-btn {
+            height: 100px;
+            width: 100px;
+            background-color: lemonchiffon;
+            border: solid;
+        }
+
+        .icon {
+            width: 100%;
+            /* pointer-events: none; */
+        }
+
+        .btn-label {
+            background-color: silver;
+            /* 클릭 이벤트 무시 */
+            /* pointer-events: none; */
+        }
+    </style>
+</head>
+
+<body>
+    <div class="menu">
+        <button class="menu-btn" data-value="1">
+            <img src="../ilbuni/ilbuni_0.png" alt="" class="icon">
+            <span class="btn-label">일분이 1</span>
+        </button>
+        <button class="menu-btn" data-value="2">
+            <img src="../ilbuni/ilbuni_1.png" alt="" class="icon">
+            <span class="btn-label">일분이 2</span>
+        </button>
+        <button class="menu-btn" data-value="3">
+            <img src="../ilbuni/ilbuni_2.png" alt="" class="icon">
+            <span class="btn-label">일분이 3</span>
+        </button>
+    </div>
+
+    <script>
+        (function () {
+            console.log('Load Main Fucntion.');
+            
+            const menu = document.querySelector('.menu');
+
+            function clickHandler(event) {
+                // console.log(event.target.getAttribute('data-value'))
+                // console.log(event.target.dataset.value)
+                let elem = event.target;
+                while (!elem.classList.contains('menu-btn')) {
+                    elem = elem.parentNode;
+                    
+                    if (elem.nodeName === 'BODY') {
+                        console.log('BODY');
+                        elem = null;
+                        return;
+                    }
+                }
+                console.log(elem.dataset.value);
+            }
+
+            menu.addEventListener('click', clickHandler);
+
+        })();
+    </script>
+</body>
+
+</html>
